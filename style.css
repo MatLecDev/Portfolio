@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @property --angle {
   syntax: "<angle>";
@@ -47,8 +46,8 @@ nav a:hover:after {
 nav #home-link::after {
   content: "Home";
 }
-nav #experiences-link::after {
-  content: "Expériences";
+nav #formations-link::after {
+  content: "Formations";
 }
 nav #projets-link::after {
   content: "Projets";
@@ -72,6 +71,10 @@ section {
 
 .dark-font-color {
   color: #6622b3;
+}
+
+.underlined {
+  text-decoration: underline;
 }
 
 #presentation-card {
@@ -174,7 +177,38 @@ h2 {
   color: rgb(39, 38, 38);
   font-size: 1.5vw;
 }
-.projet::before, .projet::after {
+.projet .technos {
+  display: flex;
+  justify-content: center;
+  gap: 5%;
+}
+.projet .technos img {
+  width: 10%;
+}
+
+.formation {
+  margin-bottom: 100px;
+  position: relative;
+  background-color: #ebeaea;
+  border-radius: 50px;
+  font-size: 1.5vw;
+  padding: 20px;
+}
+.formation .title {
+  text-align: center;
+}
+.formation .title h3 {
+  font-size: 2vw;
+  color: #6622b3;
+  border-bottom: 4px solid #6622b3;
+  margin: 0 auto;
+  width: 50%;
+}
+.formation .title p {
+  margin: 0;
+}
+
+.formation::before, .formation::after, .projet::before, .projet::after {
   padding: 7px;
   border-radius: 50px;
   content: "";
@@ -188,8 +222,9 @@ h2 {
   z-index: -1;
   animation: border-animation 2.5s linear infinite;
 }
-.projet::before {
-  filter: blur(3rem);
+
+.formation::before, .projet::before {
+  filter: blur(1.5rem);
   opacity: 0.8;
 }
 
