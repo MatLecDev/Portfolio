@@ -1,0 +1,84 @@
+.hook {
+    height: calc(100vh - 65px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hook-sentence {
+    font-size: 48px;
+    font-weight: 600;
+    max-width: 60%;
+    line-height: 1.8;
+    text-align: center;
+}
+
+.hook-word {
+    display: inline-block;
+    opacity: 0;
+    animation: twinkle-in 0.6s ease-out forwards;
+}
+
+.hook-word--gradient {
+    background: linear-gradient(90deg, #3ac8c8, #9c1ed5, #3ac8c8, #9c1ed5, #3ac8c8);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    animation: twinkle-in 0.6s ease-out forwards, gradient-slide 4s linear infinite 0.6s;
+}
+
+.hero-word {
+    display: inline-block;
+    opacity: 0;
+    animation: twinkle-in 0.6s ease-out forwards;
+}
+
+@keyframes twinkle-in {
+    0% {
+        opacity: 0;
+        scale: 0.8;
+        filter: blur(4px);
+    }
+    60% {
+        opacity: 1;
+        scale: 1.05;
+        filter: blur(0);
+    }
+    100% {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+@keyframes gradient-slide {
+    0% {
+        background-position: 200% center;
+    }
+    100% {
+        background-position: 0 center;
+    }
+}
+
+@media (max-width: 1200px) {
+    .hook-sentence {
+        max-width: 75%;
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 800px) {
+    .hook-sentence {
+        max-width: 90%;
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 500px) {
+    .hook-sentence {
+        max-width: 90%;
+        font-size: 24px;
+    }
+}

@@ -1,0 +1,134 @@
+.contactSection {
+    max-width: 50%;
+    margin: 200px auto 0 auto;
+    padding-bottom: 150px;
+    opacity: 0;
+    transform: scale(0.85);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.contactSection--visible{
+    opacity: 1;
+    transform: scale(1);
+}
+
+.contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 40px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    background:
+            linear-gradient(var(--background-color), var(--background-color)) padding-box,
+            linear-gradient(90deg, #3ac8c8, #9c1ed5, #3ac8c8, #9c1ed5, #3ac8c8) border-box;
+    background-size: 100% 100%, 200% auto;
+    animation: border-gradient-slide 4s linear infinite;
+}
+
+.contactForm h2 {
+    font-size: 40px;
+    text-align: center;
+    color: var(--main-text-color);
+    margin-bottom: 10px;
+}
+
+.formField {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.formField label {
+    color: var(--main-text-color);
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.formField input,
+.formField textarea {
+    font-family: inherit;
+    font-size: 24px;
+    color: var(--main-text-color);
+    padding: 14px 16px;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    background:
+            linear-gradient(var(--background-color), var(--background-color)) padding-box,
+            linear-gradient(90deg, #3ac8c8, #9c1ed5, #3ac8c8, #9c1ed5, #3ac8c8) border-box;
+    background-size: 100% 100%, 200% auto;
+    animation: border-gradient-slide 4s linear infinite;
+    resize: vertical;
+}
+
+.formField input::placeholder,
+.formField textarea::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.formField input:focus,
+.formField textarea:focus {
+    outline: none;
+    background-size: 100% 100%, 150% auto;
+}
+
+.contactForm button {
+    padding: 14px 24px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #3ac8c8, #9c1ed5);
+    color: white;
+    font-size: 24px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.contactForm button:hover {
+    opacity: 0.85;
+}
+
+.contactForm button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.formMessage {
+    text-align: center;
+    font-size: 15px;
+}
+
+.formMessage--success {
+    color: #3ac878;
+}
+
+.formMessage--error {
+    color: #e05555;
+}
+
+@keyframes border-gradient-slide {
+    0% {
+        background-position: 0 0, 200% center;
+    }
+    100% {
+        background-position: 0 0, 0 center;
+    }
+}
+
+@media (max-width: 700px) {
+    .contactSection {
+        max-width: 80%;
+    }
+
+    .contactForm {
+        padding: 20px;
+    }
+
+    .contactForm h2{
+        font-size: 32px;
+    }
+
+    .contactForm button, .contactForm label, .contactForm input, .contactForm textarea {
+        font-size: 18px;
+    }
+}

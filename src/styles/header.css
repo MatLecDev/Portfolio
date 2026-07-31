@@ -1,0 +1,43 @@
+header{
+    padding: 15px;
+}
+
+.nav-link{
+    position: relative;
+    font-size: 28px;
+    text-underline-offset: 8px;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 101%;
+    height: 2px;
+    background: linear-gradient(to right, #3ac8c8, #9c1ed5);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.nav-link:hover::after {
+    transform: scaleX(1);
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+@media (max-width: 600px) {
+    .nav-link{
+        font-size: 24px;
+        text-underline-offset: 7px;
+    }
+
+    .nav-link::after {
+        height: 1px;
+    }
+}

@@ -1,0 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Anta&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+*{
+    --background-color: #0d061b;
+    --main-text-color: #f1eeee;
+    font-family: "Anta", "sans-serif";
+    color: var(--main-text-color);
+}
+
+body {
+    margin: 0;
+    background-color: var(--background-color);
+}
