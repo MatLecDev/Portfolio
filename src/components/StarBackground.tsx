@@ -1,4 +1,4 @@
-import { useRef, useEffect, FC } from 'react';
+import { useRef, useEffect} from 'react';
 
 interface Star {
     x: number;

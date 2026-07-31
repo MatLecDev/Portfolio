@@ -1,4 +1,4 @@
-import { useState, FormEvent, FC } from 'react';
+import { useState, FormEvent} from 'react';
 import emailjs from '@emailjs/browser';
 import '../styles/contactForm.css';
 import useInView from "../hooks/useInView";
