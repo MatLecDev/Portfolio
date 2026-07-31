@@ -11,7 +11,7 @@
 
 .solar-system {
     position: relative;
-    width: min(90vw, 700px);
+    width: 50vw;
     aspect-ratio: 1 / 1;
     margin: 4rem auto;
 }
@@ -100,11 +100,25 @@
     }
 }
 
+@media (max-width: 1000px) {
+    .solar-system {
+        width: 70vw;
+    }
+}
 
 
 @media (max-width: 600px) {
+    .solar-system {
+        width: 70vw;
+    }
+
     .solar-system__title{
         font-size: 32px;
+    }
+
+    .solar-system__star{
+        width: 25px;
+        height: 25px;
     }
 
     .first-ring{
@@ -121,8 +135,25 @@
         width: 35px;
         height: 35px;
     }
+}
 
+@media (max-width: 400px) {
     .solar-system__star{
+        width: 20px;
+        height: 20px;
+    }
+
+    .first-ring{
+        width: 15px;
+        height: 15px;
+    }
+
+    .second-ring{
+        width: 20px;
+        height: 20px;
+    }
+
+    .third-ring{
         width: 25px;
         height: 25px;
     }

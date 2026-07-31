@@ -34,3 +34,9 @@
         height: 25px;
     }
 }
+
+@media (max-width: 400px) {
+    .footer{
+        font-size: 12px;
+    }
+}
