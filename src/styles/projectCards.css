@@ -7,6 +7,7 @@
     opacity: 0;
     transform: scale(0.85);
     transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    text-underline: none;
 }
 
 .projectSection--visible{
